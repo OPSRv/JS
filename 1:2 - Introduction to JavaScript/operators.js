@@ -32,13 +32,13 @@ console.groupEnd();
 
 //! Порядок виконання математичних операцій
 let result = 2 + 2 * 2;
-console.log(result, "Порядок виконання математичних операцій");
+console.log(result, "Порядок виконання математичних операцій звична");
 
 //! Групування
 let result2 = 2 / 2 - (3 + 4);
 console.log(result2, "Групування - 2 / 2 - (3 + 4)");
 
-//! Приведення типу(змінюємо з string на number)
+//! Приведення типу(змінюємо з string на number +stringExanple)
 let stringExanple = "45";
 let number = +stringExanple;
 console.log(number, "Приведення типу(змінюємо з string на number)");
