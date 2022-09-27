@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+}
+*,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(41, 41, 41);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  color: aliceblue;
+}
+h1 {
+  text-align: center;
+}
+strong {
+  color: rgb(255, 247, 0);
+}
