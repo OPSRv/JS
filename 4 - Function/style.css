@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+}
+*,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(41, 41, 41);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  color: aliceblue;
+}
+h1 {
+  text-align: center;
+}
+strong {
+  color: rgb(255, 225, 0);
+}
+.block {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  place-items: center;
+}
+.block > div {
+  border: 3px solid rgb(255, 225, 0);
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+.block > div:active {
+  transform: scale(0.95);
+}
+
+@media screen and (min-width: 768px) {
+  .block {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
