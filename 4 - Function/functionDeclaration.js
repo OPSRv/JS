@@ -1,6 +1,6 @@
 "use strict";
 
-//? Function Declaration
+//? FunctionDeclaration
 
 //! 1. Оголошення функції
 /*
