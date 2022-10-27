@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.2rem;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 24px;
+  padding: 24px;
+}
+
+.counter {
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  width: 320px;
+  height: 320px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  color: whitesmoke;
+}
+#number {
+  font-size: 100px;
+}
+
+button {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: #2d3058;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+button:active {
+  transform: scale(0.96);
+}
+button::after {
+  content: "";
+  z-index: -1;
+  background-color: #ffffff33;
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  width: 1.25em;
+  transform: translate3d(-525%, 0, 0) rotate(35deg);
+}
+button:hover::after {
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(200%, 0, 0) rotate(35deg);
+}
