@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+
+:root {
+  --background-color: #191a19;
+  --text-color: #f0ffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+table,
+th,
+tr {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+th {
+  height: 100%;
+}
+td,
+th {
+  padding: 10px;
+  height: 45px;
+  min-width: 250px;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+}
+.input:focus-visible {
+  outline: none;
+}
+.input_wrapper {
+  display: flex;
+}
+.spiner {
+  width: 100px;
+  display: none;
+}
+
+button {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: #2d3058;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button::after {
+  content: "";
+  z-index: -1;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  width: 1.25em;
+  transform: translate3d(-525%, 0, 0) rotate(35deg);
+}
+
+button:hover::after {
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(200%, 0, 0) rotate(35deg);
+}
+button:active {
+  transform: scale(0.95);
+}
+
+.imgJoy {
+  background-image: url(./assets/img/joy.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s;
+  background-size: 25%;
+}
+
+.imgSad {
+  background-image: url(./assets/img/sad.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s;
+  background-size: 25%;
+}
