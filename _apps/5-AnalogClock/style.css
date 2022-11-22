@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
+html {
+  box-sizing: border-box;
+}
+*,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: "Splash", cursive;
+  background-image: linear-gradient(to top, #1d2329 0%, #373a3f 100%);
+  overflow: hidden;
+}
+
+.wrapper-clock {
+  padding: 80px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #26567f 0%, #028a91 100%);
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+}
+
+.wrapper-clock:hover .clock {
+  transform: scale(1.32);
+}
+
+.center {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #26567f, #028a91);
+  box-shadow: 16px 16px 32px #292828, -16px -16px 32px #dfdfdf;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.clock {
+  transition: transform 1s linear;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: inset -9px 9px 18px #4facfe14, inset 9px -9px 18px #4facfe15;
+  border: 60px solid #4facfe7a;
+  user-select: none;
+}
+
+.hand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: top;
+  animation-name: rotate-clock;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: transform 1s linear;
+  width: 2px;
+}
+
+.clockwise {
+  height: 135px;
+  background-color: rgb(255, 0, 0);
+  transform: rotate(180deg);
+  /* animation-duration: 36s; */
+}
+.minute {
+  height: 235px;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(180deg);
+  /* animation-duration: 36s; */
+}
+.second {
+  height: 250px;
+  background-color: azure;
+  transform: rotate(180deg);
+  /* animation-duration: 6s; */
+}
+
+@keyframes rotate-clock {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+ul {
+  top: 34%;
+  left: 43%;
+  width: 30px;
+  height: 30px;
+  font-size: 60px;
+  list-style: none;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  transform: translate(-50%, -50%), rotate(90deg);
+}
+li {
+  top: 0%;
+  opacity: 1;
+  left: -720%;
+  width: 620px;
+  position: absolute;
+  animation-delay: 1s;
+  transform-origin: top;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  transform: translate(-50%, -50%);
+  animation-direction: reverse;
+  /* 
+  border: 1px solid red; */
+}
+.wrapper-clock:hover li {
+  animation-name: number-clock;
+}
+
+@keyframes number-clock {
+  100% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+li > span {
+  position: absolute;
+  top: -50px;
+  transform-origin: center;
+}
+
+li:nth-child(even) {
+  color: #9c9c9c;
+}
+
+li:nth-child(odd) {
+  color: #d8d8d8;
+}
+
+li:nth-child(1) {
+  transform: rotate(120deg);
+}
+li:nth-child(2) {
+  transform: rotate(150deg);
+}
+li:nth-child(3) {
+  transform: rotate(180deg);
+}
+li:nth-child(4) {
+  transform: rotate(210deg);
+}
+li:nth-child(5) {
+  transform: rotate(240deg);
+}
+li:nth-child(6) {
+  transform: rotate(270deg);
+}
+li:nth-child(7) {
+  transform: rotate(300deg);
+}
+li:nth-child(8) {
+  transform: rotate(330deg);
+}
+li:nth-child(9) {
+  transform: rotate(360deg);
+}
+li:nth-child(10) {
+  transform: rotate(30deg);
+}
+li:nth-child(11) {
+  transform: rotate(60deg);
+}
+li:nth-child(12) {
+  transform: rotate(90deg);
+}
+
+li:nth-child(1) > span {
+  transform: rotate(-120deg);
+}
+li:nth-child(2) > span {
+  transform: rotate(-150deg);
+}
+li:nth-child(3) > span {
+  transform: rotate(-180deg);
+}
+li:nth-child(4) > span {
+  transform: rotate(-210deg);
+}
+li:nth-child(5) > span {
+  transform: rotate(-240deg);
+}
+li:nth-child(6) > span {
+  transform: rotate(-270deg);
+}
+li:nth-child(7) > span {
+  transform: rotate(-300deg);
+}
+li:nth-child(8) > span {
+  transform: rotate(-330deg);
+}
+li:nth-child(9) > span {
+  transform: rotate(-360deg);
+}
+li:nth-child(10) > span {
+  transform: rotate(-30deg);
+}
+li:nth-child(11) > span {
+  transform: rotate(-60deg);
+}
+li:nth-child(12) > span {
+  transform: rotate(-90deg);
+}
+
+/* :first-child
+:last-child */

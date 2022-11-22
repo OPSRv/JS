@@ -40,14 +40,3 @@ console.log(dateMin < dateMax);
 
 //? Кількість мілісекунд, що пройшли з 1 січня 1970 року до вказаної дати
 console.log(Date.parse("2022-08-11"));
-
-//? Методи
-let date7 = new Date();
-console.log(date7.getFullYear(), "рік");
-console.log(date7.getMonth(), "Місяць від 0-11");
-console.log(date7.getDate(), "отримаємо день в місяці");
-console.log(date7.getDay(), "день в тижні");
-console.log(date7.getHours(), "години");
-console.log(date7.getMinutes(), "хвилини");
-console.log(date7.getSeconds(), "cекунди");
-console.log(date7.getMilliseconds(), "міліcекунди");
