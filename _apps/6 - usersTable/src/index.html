@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" id="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Tailwind CSS</title>
+  </head>
+  <body
+    class="text-gray-800 dark:text-gray-50 bg-slate-300 dark:bg-slate-500 grid place-items-center"
+  >
+    <div class="flex flex-col">
+      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+          <div class="overflow-hidden">
+            <table class="min-w-full overflow-y-auto" id="table">
+              <thead class="bg-white border-b">
+                <tr id="headerTable"></tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
