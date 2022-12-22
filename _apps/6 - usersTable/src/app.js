@@ -67,7 +67,7 @@ ${elem.profile.company}
     <td
     class="text-sm text-gray-900 hover:bg-cyan-600 hover:text-cyan-50 font-light px-6 py-4 whitespace-nowrap"
     >
-    ${new Date(elem.createdAt)} 
+    ${formatDate(elem.createdAt)} 
     </td>
     </tr>`
   )
@@ -77,7 +77,6 @@ headerTable.innerHTML = setHeader;
 bodyTable.innerHTML = setTableBody;
 
 const sortTable = (colNum, type, id, isSorted) => {
-  console.log(isSorted, "isSorted");
   let elem = document.getElementById(id);
   let tbody = elem.querySelector("tbody");
   let rowsArray = Array.from(tbody.rows);
@@ -96,6 +95,11 @@ const sortTable = (colNum, type, id, isSorted) => {
           : -1;
       };
       break;
+    case "date":
+      compare = (rowA, rowB) => {
+        return a - b;
+      };
+      break;
   }
 
   rowsArray.sort(compare);
@@ -111,3 +115,11 @@ headerTable.onclick = (e) => {
   sortTable(index, type, "table", colIndex === index);
   colIndex = colIndex === index ? -1 : index;
 };
+
+function formatDate(ddddd) {
+  let d = new Date(ddddd);
+  const date = d.getDate().toString().padStart(2, "0");
+  const month = (d.getMonth() + 1).toString().padStart(2, "0");
+  const year = d.getFullYear();
+  return new Date(`${date}.${month}.${year}`);
+}
